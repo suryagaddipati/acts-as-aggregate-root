@@ -24,10 +24,20 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "init.rb",
-    "lib/acts-as-aggregate-root.rb",
-    "test/helper.rb",
-    "test/test_acts-as-aggregate-root.rb"
+    "acts-as-aggregate-root.gemspec",
+    "acts_as_taggable_on.sqlite3",
+    "lib/acts_as_aggregate_root.rb",
+    "lib/acts_as_aggregate_root/acts_as_aggregate_root.rb",
+    "rails/init.rb",
+    "spec/acts_as_aggregate_root/acts_as_aggregate_root_spec.rb",
+    "spec/bm.rb",
+    "spec/database.yml",
+    "spec/debug.log",
+    "spec/order.rb",
+    "spec/order_item.rb",
+    "spec/schema.rb",
+    "spec/spec_helper.rb",
+    "spec/sub_order.rb"
   ]
   s.homepage = %q{http://github.com/suryagaddipati/acts-as-aggregate-root}
   s.licenses = ["MIT"]
@@ -35,29 +45,46 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.4.2}
   s.summary = %q{Makes an active record object act as an aggregate root}
   s.test_files = [
-    "test/helper.rb",
-    "test/test_acts-as-aggregate-root.rb"
+    "spec/acts_as_aggregate_root/acts_as_aggregate_root_spec.rb",
+    "spec/bm.rb",
+    "spec/order.rb",
+    "spec/order_item.rb",
+    "spec/schema.rb",
+    "spec/spec_helper.rb",
+    "spec/sub_order.rb"
   ]
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<rails>, ["= 2.3.5"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<sqlite3-ruby>, [">= 0"])
+      s.add_development_dependency(%q<mysql>, [">= 0"])
     else
+      s.add_dependency(%q<rails>, ["= 2.3.5"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
+      s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
+      s.add_dependency(%q<mysql>, [">= 0"])
     end
   else
+    s.add_dependency(%q<rails>, ["= 2.3.5"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
+    s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
+    s.add_dependency(%q<mysql>, [">= 0"])
   end
 end
 
