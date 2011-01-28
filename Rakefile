@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "acts-as-aggregate-root"
   gem.homepage = "http://github.com/suryagaddipati/acts-as-aggregate-root"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Makes an active record object act as an aggregate root}
+  gem.description = %Q{Automatically manages saving, deletion and validating the object graph}
   gem.email = "surya.gaddipati@gmail.com"
   gem.authors = ["Surya Gaddipati"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
