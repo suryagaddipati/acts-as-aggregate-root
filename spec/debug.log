@@ -1,0 +1,5 @@
+# Logfile created on Fri Jan 28 11:20:59 -0600 2011 by logger.rb/22285
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mDELETE FROM sub_orders[0m

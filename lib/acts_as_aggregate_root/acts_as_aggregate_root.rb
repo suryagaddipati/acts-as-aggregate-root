@@ -1,3 +1,4 @@
+
 module ActsAsAggregateRoot  #:nodoc:
   def self.included(base)
     base.extend(ClassMethods)
@@ -27,15 +28,11 @@ module ActsAsAggregateRoot  #:nodoc:
         def has_many(association_id, options = {}, &extension)
           # options .merge! :autosave => true , :dependent => :destroy 
           super
-          reflection = create_has_many_reflection(association_id, options, &extension)
-          add_destroy_method(self,reflection.name)
-          add_destroy_methods_to_class(reflection.klass)
+          # reflection = create_has_many_reflection(association_id, options, &extension)
+          # add_destroy_method(self,reflection.name)
+          # add_destroy_methods_to_class(reflection.klass)
         end
       end
     end
   end
 end
-
-
-
-ActiveRecord::Base.class_eval { include ActsAsAggregateRoot }
