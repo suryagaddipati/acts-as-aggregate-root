@@ -7,4 +7,4 @@ mysql:
   hostname: localhost
   username: root
   database: acts_as_aggregate_root
-
+  socket: /tmp/mysql.sock

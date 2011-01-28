@@ -29,7 +29,7 @@ unless [].respond_to?(:freq)
   end
 end
 
-ENV['DB'] ||= 'sqlite3'
+ENV['DB'] ||= "mysql"
 
 database_yml = File.expand_path('../database.yml', __FILE__)
 if File.exists?(database_yml)
@@ -42,7 +42,9 @@ if File.exists?(database_yml)
     ActiveRecord::Migration.verbose = false
     
     load(File.dirname(__FILE__) + '/schema.rb')
-    load(File.dirname(__FILE__) + '/models.rb')
+    load(File.dirname(__FILE__) + '/order_item.rb')
+    load(File.dirname(__FILE__) + '/sub_order.rb')
+    load(File.dirname(__FILE__) + '/order.rb')
   end  
   
 else
@@ -50,7 +52,7 @@ else
 end
 
 def clean_database!
-  models = [Order, SubOrder]
+  models = [Order, SubOrder,OrderItem]
   models.each do |model|
     ActiveRecord::Base.connection.execute "DELETE FROM #{model.table_name}"
   end
