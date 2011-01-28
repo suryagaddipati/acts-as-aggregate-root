@@ -160,3 +160,690 @@
   [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` [0m
   [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
   [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `updated_at`) VALUES('2011-01-28 12:05:44', '2011-01-28 12:05:44')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`created_at`, `order_id`, `updated_at`) VALUES('2011-01-28 12:05:44', 1, '2011-01-28 12:05:44')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `updated_at`) VALUES('2011-01-28 12:05:44', '2011-01-28 12:05:44')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`created_at`, `order_id`, `updated_at`) VALUES('2011-01-28 12:05:44', 2, '2011-01-28 12:05:44')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`created_at`, `sub_order_id`, `updated_at`) VALUES('2011-01-28 12:05:44', 2, '2011-01-28 12:05:44')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.4ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `updated_at`) VALUES('2011-01-28 12:05:44', '2011-01-28 12:05:44')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`created_at`, `order_id`, `updated_at`) VALUES('2011-01-28 12:05:44', 3, '2011-01-28 12:05:44')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`created_at`, `updated_at`) VALUES('2011-01-28 12:06:24', '2011-01-28 12:06:24')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`created_at`, `order_id`, `updated_at`) VALUES('2011-01-28 12:06:24', 1, '2011-01-28 12:06:24')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `updated_at`) VALUES('2011-01-28 12:06:24', '2011-01-28 12:06:24')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`created_at`, `order_id`, `updated_at`) VALUES('2011-01-28 12:06:24', 2, '2011-01-28 12:06:24')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`created_at`, `sub_order_id`, `updated_at`) VALUES('2011-01-28 12:06:24', 2, '2011-01-28 12:06:24')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.3ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`created_at`, `updated_at`) VALUES('2011-01-28 12:06:24', '2011-01-28 12:06:24')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`created_at`, `order_id`, `updated_at`) VALUES('2011-01-28 12:06:24', 3, '2011-01-28 12:06:24')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:07:33', '2011-01-28 12:07:33')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:07:33', 1, '2011-01-28 12:07:33')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:07:33', '2011-01-28 12:07:33')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:07:33', 2, '2011-01-28 12:07:33')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:07:33', 2, '2011-01-28 12:07:33')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.3ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:07:33', '2011-01-28 12:07:33')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:07:33', 3, '2011-01-28 12:07:33')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:24', '2011-01-28 12:08:24')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:24', 1, '2011-01-28 12:08:24')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:24', '2011-01-28 12:08:24')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:24', 2, '2011-01-28 12:08:24')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:24', 2, '2011-01-28 12:08:24')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.3ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:24', '2011-01-28 12:08:24')[0m
+  [4;35;1mSubOrder Create (1.3ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:24', 3, '2011-01-28 12:08:24')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:59', '2011-01-28 12:08:59')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:59', 1, '2011-01-28 12:08:59')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:59', '2011-01-28 12:08:59')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:59', 2, '2011-01-28 12:08:59')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:59', 2, '2011-01-28 12:08:59')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.4ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:59', '2011-01-28 12:08:59')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:08:59', 3, '2011-01-28 12:08:59')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:15', '2011-01-28 12:09:15')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:15', 1, '2011-01-28 12:09:15')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:15', '2011-01-28 12:09:15')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:15', 2, '2011-01-28 12:09:15')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:15', 2, '2011-01-28 12:09:15')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.3ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:15', '2011-01-28 12:09:15')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:15', 3, '2011-01-28 12:09:15')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:35', '2011-01-28 12:09:35')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:35', 1, '2011-01-28 12:09:35')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:35', '2011-01-28 12:09:35')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:35', 2, '2011-01-28 12:09:35')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:35', 2, '2011-01-28 12:09:35')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.3ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:35', '2011-01-28 12:09:35')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:09:35', 3, '2011-01-28 12:09:35')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Update (0.2ms)[0m   [0;1mUPDATE `orders` SET `updated_at` = '2011-01-28 12:09:35', `name` = 'OrderName' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `orders` LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:10:03', '2011-01-28 12:10:03')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:10:03', 1, '2011-01-28 12:10:03')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:10:03', '2011-01-28 12:10:03')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:10:03', 2, '2011-01-28 12:10:03')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:10:03', 2, '2011-01-28 12:10:03')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.3ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:10:03', '2011-01-28 12:10:03')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:10:03', 3, '2011-01-28 12:10:03')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Update (0.2ms)[0m   [0;1mUPDATE `orders` SET `updated_at` = '2011-01-28 12:10:03', `name` = 'OrderName' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM `orders` LIMIT 1[0m
+  [4;35;1mSubOrder Load (0.1ms)[0m   [0mSELECT * FROM `sub_orders` LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:51:41', '2011-01-28 12:51:41')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:51:41', 1, '2011-01-28 12:51:41')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:51:41', '2011-01-28 12:51:41')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:51:41', 2, '2011-01-28 12:51:41')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:51:41', 2, '2011-01-28 12:51:41')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.1ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.3ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:51:41', '2011-01-28 12:51:41')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:51:41', 3, '2011-01-28 12:51:41')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Update (0.2ms)[0m   [0;1mUPDATE `orders` SET `updated_at` = '2011-01-28 12:51:41', `name` = 'OrderName' WHERE `id` = 3[0m
+  [4;35;1mSubOrder Update (0.1ms)[0m   [0mUPDATE `sub_orders` SET `updated_at` = '2011-01-28 12:51:41', `name` = 'SubOrderName' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` LIMIT 1[0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:18', '2011-01-28 12:55:18')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:18', 1, '2011-01-28 12:55:18')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.2ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.2ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:18', '2011-01-28 12:55:18')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:18', 2, '2011-01-28 12:55:18')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:18', 2, '2011-01-28 12:55:18')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.1ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:18', '2011-01-28 12:55:18')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:18', 3, '2011-01-28 12:55:18')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Update (0.2ms)[0m   [0;1mUPDATE `orders` SET `updated_at` = '2011-01-28 12:55:18', `name` = 'OrderName' WHERE `id` = 3[0m
+  [4;35;1mSubOrder Update (0.1ms)[0m   [0mUPDATE `sub_orders` SET `updated_at` = '2011-01-28 12:55:18', `name` = 'SubOrderName' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` LIMIT 1[0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.2ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:42', '2011-01-28 12:55:42')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:42', 1, '2011-01-28 12:55:42')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:42', '2011-01-28 12:55:42')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:42', 2, '2011-01-28 12:55:42')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:42', 2, '2011-01-28 12:55:42')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.1ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:42', '2011-01-28 12:55:42')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:42', 3, '2011-01-28 12:55:42')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Update (0.2ms)[0m   [0;1mUPDATE `orders` SET `updated_at` = '2011-01-28 12:55:42', `name` = 'OrderName' WHERE `id` = 3[0m
+  [4;35;1mSubOrder Update (0.1ms)[0m   [0mUPDATE `sub_orders` SET `updated_at` = '2011-01-28 12:55:42', `name` = 'SubOrderName' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` LIMIT 1[0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:42', '2011-01-28 12:55:42')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:42', 4, '2011-01-28 12:55:42')[0m
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:55:42', 4, '2011-01-28 12:55:42')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Update (0.2ms)[0m   [0;1mUPDATE `orders` SET `updated_at` = '2011-01-28 12:55:42', `name` = 'OrderName' WHERE `id` = 4[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `orders` LIMIT 1[0m
+  [4;35;1mOrderItem Load (0.1ms)[0m   [0mSELECT * FROM `order_items` LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSubOrder Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `sub_orders`[0m
+  [4;35;1mOrder Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.4ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:56:52', '2011-01-28 12:56:52')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:56:52', 1, '2011-01-28 12:56:52')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Load (0.2ms)[0m   [0mSELECT * FROM `order_items` WHERE (`order_items`.sub_order_id = 1) [0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 1[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mOrderItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `order_items`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.1ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:56:52', '2011-01-28 12:56:52')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:56:52', 2, '2011-01-28 12:56:52')[0m
+  [4;36;1mOrderItem Create (0.1ms)[0m   [0;1mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:56:52', 2, '2011-01-28 12:56:52')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrderItem Destroy (0.1ms)[0m   [0mDELETE FROM `order_items` WHERE `id` = 1[0m
+  [4;36;1mSubOrder Destroy (0.1ms)[0m   [0;1mDELETE FROM `sub_orders` WHERE `id` = 2[0m
+  [4;35;1mOrder Destroy (0.1ms)[0m   [0mDELETE FROM `orders` WHERE `id` = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` [0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` [0m
+  [4;35;1mOrderItem Load (31.1ms)[0m   [0mSELECT * FROM `order_items` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDELETE FROM orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM sub_orders[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM order_items[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Create (0.2ms)[0m   [0;1mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:56:52', '2011-01-28 12:56:52')[0m
+  [4;35;1mSubOrder Create (0.1ms)[0m   [0mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:56:52', 3, '2011-01-28 12:56:52')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Update (0.8ms)[0m   [0;1mUPDATE `orders` SET `updated_at` = '2011-01-28 12:56:52', `name` = 'OrderName' WHERE `id` = 3[0m
+  [4;35;1mSubOrder Update (0.1ms)[0m   [0mUPDATE `sub_orders` SET `updated_at` = '2011-01-28 12:56:52', `name` = 'SubOrderName' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` LIMIT 1[0m
+  [4;36;1mSubOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `sub_orders` LIMIT 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mDELETE FROM orders[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mDELETE FROM sub_orders[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM order_items[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Create (0.1ms)[0m   [0mINSERT INTO `orders` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2011-01-28 12:56:52', '2011-01-28 12:56:52')[0m
+  [4;36;1mSubOrder Create (0.1ms)[0m   [0;1mINSERT INTO `sub_orders` (`name`, `created_at`, `order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:56:52', 4, '2011-01-28 12:56:52')[0m
+  [4;35;1mOrderItem Create (0.1ms)[0m   [0mINSERT INTO `order_items` (`name`, `created_at`, `sub_order_id`, `updated_at`) VALUES(NULL, '2011-01-28 12:56:52', 4, '2011-01-28 12:56:52')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mOrder Update (0.2ms)[0m   [0;1mUPDATE `orders` SET `updated_at` = '2011-01-28 12:56:52', `name` = 'OrderName' WHERE `id` = 4[0m
+  [4;35;1mOrderItem Update (0.1ms)[0m   [0mUPDATE `order_items` SET `updated_at` = '2011-01-28 12:56:52', `name` = 'OrderItemName' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` LIMIT 1[0m
+  [4;36;1mOrderItem Load (0.1ms)[0m   [0;1mSELECT * FROM `order_items` LIMIT 1[0m

@@ -9,6 +9,7 @@ module ActsAsAggregateRoot  #:nodoc:
       def add_destroy_methods_to_class(klass)
         klass.reflections.select {|(k,v)| v.macro == :has_many }.each {|(name,reflection)|
            add_destroy_method(klass,name.to_s)
+           reflection.options[:autosave] = true
            add_destroy_methods_to_class(reflection.klass)
         }
       end
@@ -29,6 +30,7 @@ module ActsAsAggregateRoot  #:nodoc:
           # options .merge! :autosave => true , :dependent => :destroy 
           super
           reflection = create_has_many_reflection(association_id, options, &extension)
+          reflection.options[:autosave] = true
           add_destroy_method(self,reflection.name)
           add_destroy_methods_to_class(reflection.klass)
         end
