@@ -1,6 +1,42 @@
 = acts-as-aggregate-root
 
-Description goes here.
+Intended to make an activerecord object an 'AggregateRoot' meaning the root manages the lifecyle of all the objects in the 'Aggregate'.
+
+The whole aggreage is automatically saved/deleted when the root is saved/deleted. Without having to manually mark each 'has_many' as autosave/delete.
+
+== Installation
+
+=== Rails 2.3.x
+
+Acts As AggregateRoot  is tested to work in Rails 2.3.5. 
+
+config.gem "acts_as_aggregate_root"
+After that, you can run "rake gems:install" to install the gem if you don't already have it.
+
+== Testing
+
+Acts As Aggregate Root uses RSpec for its test coverage.
+
+If you already have RSpec on your application, the specs will run while using:
+
+rake spec:plugins
+
+
+== Usage
+
+    class Order < ActiveRecord::Base
+      acts_as_aggregate_root
+      has_many :order_items
+    end
+
+    class OrderItem < ActiveRecord::Base
+      belongs_to :order
+    end
+
+
+  Order.first.destroy
+  Order.all.count == 0
+  OrderItem.all.count ==0
 
 == Contributing to acts-as-aggregate-root
  
