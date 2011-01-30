@@ -1,1 +1,1 @@
-require "acts-as-aggregate-root"
+require "acts_as_aggregate_root"

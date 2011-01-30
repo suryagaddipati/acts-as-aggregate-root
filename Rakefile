@@ -12,7 +12,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "acts-as-aggregate-root"
+  gem.name = "acts_as_aggregate_root"
   gem.homepage = "http://github.com/suryagaddipati/acts-as-aggregate-root"
   gem.license = "MIT"
   gem.summary = %Q{Makes an active record object act as an aggregate root}
@@ -47,7 +47,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "acts-as-aggregate-root #{version}"
+  rdoc.title = "acts_as_aggregate_root #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
